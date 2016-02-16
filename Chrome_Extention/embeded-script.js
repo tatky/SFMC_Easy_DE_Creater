@@ -7,7 +7,8 @@ document.addEventListener('paste', function(e){
 	setTimeout(function(){
 		$row = $("#new-de-attributes .grid-row:last");
 		rowValues = row.split(/\t/);
-		$row.find('.field-name-cell input:not(".fuel-input-overlayInput")').val(rowValues[0]).keydown();
+		
+		$row.find('.field-name-cell input:not(".fuel-input-overlayInput")').val(rowValues[0]).focus().keydown();
 		$row.find('.field-length-cell input:not(".fuel-input-overlayInput")').val(rowValues[2]).keydown();
 		if(rowValues[3]) $row.find('.primary-key-cell .fuel-checkboxbutton-icon').click();
 		if(rowValues[4]) $row.find('.required-field-cell .fuel-checkboxbutton-icon').click();
